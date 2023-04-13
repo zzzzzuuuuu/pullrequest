@@ -1,6 +1,6 @@
-import "../css/Main.css";
+import "../Main.css";
 
-const Main = (props) => {
+const Main = () => {
   return <></>;
 };
 
