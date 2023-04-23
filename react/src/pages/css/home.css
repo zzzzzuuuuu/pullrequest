@@ -1,0 +1,74 @@
+.row3{
+  width: 500px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.row3news{
+  flex: 0.1;
+  color: #9fc5e8;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.newsbox{
+  flex: 0.4;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.news2{
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.news2one{
+  display: flex;
+}
+.one1{
+  flex: 0.5;
+  font-size: smaller;
+}
+.one2{
+  flex: 0.5;
+  font-size: smaller;
+}
+
+.news2two{
+  display: flex;
+}
+.two1{
+  flex: 0.5;
+  font-size: smaller;
+}
+.two2{
+  flex: 0.5;
+  font-size: smaller;
+}
+
+.news1{
+  flex: 0.5;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.news1a{
+  flex: 0.1;
+  font-size:small;
+}
+
+.row3main{
+  flex: 0.2;
+  color: #9fc5e8;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.img {
+  padding-top: 5px;
+  width: 100%;
+}
