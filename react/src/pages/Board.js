@@ -3,7 +3,7 @@ const Board = (props) => {
     <>
       <div className="homebtn">
         <a href="#">
-          <span class="menubox">{props.data}</span>
+          <span className="menubox">{props.data}</span>
         </a>
       </div>
     </>
