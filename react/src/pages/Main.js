@@ -2,7 +2,7 @@ import "./css/font.css";
 import "./css/home.css";
 import "./css/layout.css";
 
-import Intro from "./Intro";
+import IntroList from "./IntroList";
 import Data from "./Data.json";
 
 const Main = () => {
@@ -13,7 +13,7 @@ const Main = () => {
         <div className="bookdot">
           <div className="page">
             <div className="container">
-              <Intro data={Data} />
+              <IntroList data={Data} />
             </div>
           </div>
         </div>
