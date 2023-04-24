@@ -23,7 +23,7 @@
       font-size: 14px;
       font-family: 'KyoboHand';
   }
-  .row3title{
+  .row3title_diary{
     flex: 0.1;
     margin-bottom: 20px; /* 달력이랑 일기 사이 간격 */
     /*width: 98%;*/
