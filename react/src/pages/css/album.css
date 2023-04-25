@@ -1,4 +1,4 @@
-.row3{
+.row3_album{
     width: 500px;
   flex: 2;
   display: flex;
@@ -8,7 +8,7 @@
   overflow-x: hidden;
     height: 390px;
 }
-.row3title{
+.row3title_album{
     flex: 0.1;
     margin-bottom: 10px;
     width: 100%;

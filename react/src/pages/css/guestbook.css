@@ -1,4 +1,4 @@
-.row3{
+.row3_guest{
     width: 500px;
   flex: 2;
   display: flex;
@@ -7,7 +7,7 @@
   overflow-y: scroll;
   overflow-x: hidden;
 }
-.row3title{
+.row3title_guest{
     flex: 0.1;
     margin-bottom: 10px;
     width: 100%;
@@ -18,14 +18,14 @@
     font-size: 15px;
     padding: 5px;
 }
-.over{
+.over_guest{
     flex: 0.9;
     display: flex;
-  }.over > img{
+  }.over_guest > img{
       flex: 0.3;
       width: 40%;
       height: 70%;
-  }.over > p{
+  }.over_guest > p{
       flex: 0.7;
     font-family: 'KyoboHand';
     font-size: 17px;
