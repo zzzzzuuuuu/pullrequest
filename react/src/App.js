@@ -9,28 +9,27 @@ import DiaryList from "./pages/DiaryList";
 import Album from "./pages/Album";
 import GuestBook from "./pages/GuestBook";
 
-import { Route, Routes } from "react-router-dom"; // 여기까지 함
+import { Route, Routes } from "react-router-dom"; // 라우터 연결
 
 function App() {
   return (
-    <Routes>
-      <div className="bookcover">
-        <div className="bookdot">
-          <div className="page">
-            <div className="container">
-              <IntroList data={Data} />
-              {/* <Home data={Data} /> */}
+    <div className="bookcover">
+      <div className="bookdot">
+        <div className="page">
+          <div className="container">
+            <IntroList data={Data} />
+            <Routes>
               <Route path="/" element={<Home data={Data} />} />
-              <Route path="/" element={<Profile />} />
-              <Route path="/" element={<DiaryList data={Data} />} />
-              <Route path="/" element={<Album />} />
-              <Route path="/" element={<GuestBook />} />
-              <BoardList data={Data} />
-            </div>
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/diary" element={<DiaryList data={Data} />} />
+              <Route path="/album" element={<Album />} />
+              <Route path="/guestbook" element={<GuestBook />} />
+            </Routes>
+            <BoardList data={Data} />
           </div>
         </div>
       </div>
-    </Routes>
+    </div>
   );
 }
 
