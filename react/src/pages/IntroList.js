@@ -1,8 +1,10 @@
 import Intro from "./Intro";
 import img from "./img/selfie12.jpg";
+import { useState } from "react";
 
 const IntroList = (props) => {
   const { intro } = props.data;
+  let [like, setLike] = useState(0);
   return (
     <>
       <div className="column1">
@@ -18,8 +20,20 @@ const IntroList = (props) => {
               <Intro data={data} key={index} />
             ))}
           </div>
-          <div className="row1c">안지유 (♀)</div>
           <div className="row1d">
+            {" "}
+            {/* 하트 누르면 좋아요 수가 올라감! */}
+            <span
+              onClick={() => {
+                setLike(like + 1);
+              }}
+            >
+              🩷+
+            </span>
+            {like}
+          </div>
+          <div className="row1c">안지유 (♀)</div>
+          <div>
             <select name="site">
               <option value="#">파도타기</option>
             </select>
