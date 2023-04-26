@@ -1,4 +1,11 @@
-import Main from "./pages/Main";
+import "./pages/css/font.css";
+import "./pages/css/layout.css";
+import "./pages/css/home.css";
+import "./pages/css/profile.css";
+import "./pages/css/diary.css";
+import "./pages/css/album.css";
+import "./pages/css/guestbook.css";
+
 import IntroList from "./pages/IntroList";
 import BoardList from "./pages/BoardList";
 import Data from "./pages/Data.json";
