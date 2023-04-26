@@ -14,9 +14,9 @@ const DiaryList = (props) => {
           <div className="row3title_diary">
             <div className="date">
               {" "}
-              04.24
+              04.26
               <br />
-              MON
+              WED
             </div>
             <div className="date2">
               <div className="date31 blueday">1</div>
