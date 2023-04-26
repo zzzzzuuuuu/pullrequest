@@ -17,6 +17,7 @@
     font-family: 'KyoboHand';
     font-size: 15px;
     margin-bottom: 15px;
+    white-space: pre-wrap; /* jsx 줄바꿈 */
   }.page1 > p{
       color: black;
       text-align: center;
@@ -79,6 +80,3 @@
     background-color: skyblue;
     color: black;
   }
-
-
-

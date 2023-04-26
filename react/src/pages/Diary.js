@@ -4,7 +4,7 @@ const Diary = (props) => {
     <>
       <div className="page1">
         {title}
-        <p>{content}</p> {/* 이거 왜 줄바꿈 안되지? 역순정렬해야됨 */}
+        <p>{content}</p>
       </div>
     </>
   );

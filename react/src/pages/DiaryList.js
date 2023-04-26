@@ -52,9 +52,9 @@ const DiaryList = (props) => {
             </div>
           </div>
           <div className="over">
-            {diary.map((data, index) => (
-              <Diary data={data} key={index} />
-            ))}
+            {diary
+              .map((data, index) => <Diary data={data} key={index} />)
+              .reverse()}
           </div>
         </div>
       </div>
