@@ -1,7 +1,7 @@
 body {
     background-color: #a3a3a3;
     /* body에 배경이미지 적용 */
-    background-image: url("../img/pattern.png");
+    background-image: url("../../img/pattern.png");
     /* 고정된 사이즈로 설정 */
     background-size: 100px;
   

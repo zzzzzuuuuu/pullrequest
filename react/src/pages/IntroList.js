@@ -1,5 +1,5 @@
 import Intro from "./Intro";
-import img from "./img/selfie12.jpg";
+import img from "../img/selfie12.jpg";
 import { useState } from "react";
 
 const IntroList = (props) => {

@@ -2,7 +2,7 @@ import News1b from "./News1b";
 import News1r from "./News1r";
 import News2one from "./News2one";
 import News2two from "./News2two";
-import img from "./img/miniroom.jpg";
+import img from "../img/miniroom.jpg";
 
 const Home = (props) => {
   const { news1b, news1r, news2one, news2two } = props.data;
