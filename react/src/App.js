@@ -14,7 +14,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import DiaryList from "./pages/DiaryList";
 import AlbumList from "./pages/AlbumList";
-import GuestBook from "./pages/GuestBook";
+import GuestBookList from "./pages/GuestBookList";
 
 import { Route, Routes } from "react-router-dom"; // 라우터 연결
 
@@ -30,7 +30,10 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/diary" element={<DiaryList data={Data} />} />
               <Route path="/album" element={<AlbumList data={Data} />} />
-              <Route path="/guestbook" element={<GuestBook />} />
+              <Route
+                path="/guestbook"
+                element={<GuestBookList data={Data} />}
+              />
             </Routes>
             <BoardList data={Data} />
           </div>
