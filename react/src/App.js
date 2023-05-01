@@ -13,7 +13,7 @@ import Data from "./pages/Data.json";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import DiaryList from "./pages/DiaryList";
-import Album from "./pages/Album";
+import AlbumList from "./pages/AlbumList";
 import GuestBook from "./pages/GuestBook";
 
 import { Route, Routes } from "react-router-dom"; // 라우터 연결
@@ -29,7 +29,7 @@ function App() {
               <Route path="/" element={<Home data={Data} />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/diary" element={<DiaryList data={Data} />} />
-              <Route path="/album" element={<Album />} />
+              <Route path="/album" element={<AlbumList data={Data} />} />
               <Route path="/guestbook" element={<GuestBook />} />
             </Routes>
             <BoardList data={Data} />
