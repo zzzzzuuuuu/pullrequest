@@ -1,0 +1,38 @@
+.row3_guest{
+    width: 500px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.row3title_guest{
+    flex: 0.1;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #9fc5e8;
+    border-radius: 3px;
+    color: black;
+    font-family: 'KyoboHand';
+    font-size: 15px;
+    padding: 5px;
+}
+.over_guest{
+    flex: 0.9;
+    display: flex;
+  }.over_guest > img{
+      flex: 0.3;
+      width: 40%;
+      height: 70%;
+  }.over_guest > p{
+      flex: 0.7;
+    font-family: 'KyoboHand';
+    font-size: 17px;
+    color: black;
+    margin: 10px 20px;
+  }
+.cnt2{
+    color: rgb(0, 128, 255);
+    font-size: 18px;
+  }
