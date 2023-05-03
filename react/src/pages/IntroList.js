@@ -1,10 +1,12 @@
 import Intro from "./Intro";
 import img from "../img/selfie12.jpg";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { DarkContext } from "../App";
 
 const IntroList = (props) => {
   const { intro } = props.data;
-  let [like, setLike] = useState(0);
+  const [like, setLike] = useState(0);
+
   return (
     <>
       <div className="column1">
