@@ -141,7 +141,7 @@
 
 .column1DarkMode{
   flex: 0.4;
-  background-color: black;
+  background-color: gray;
 
   display: flex;
   flex-direction: column;
@@ -288,6 +288,9 @@
   margin: 2px 0px;
   border-radius: 3px;
   font-size: small;
+}
+.fontWhite{ 
+  color: white;
 }
 
 .menubox{ /* 버튼 */

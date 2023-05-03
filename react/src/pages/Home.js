@@ -5,11 +5,10 @@ import News2two from "./News2two";
 import img from "../img/miniroom.jpg";
 import { useContext } from "react";
 import { DarkContext } from "../App";
-import DarkMode from "./DarkMode";
 
 const Home = (props) => {
   const { news1b, news1r, news2one, news2two } = props.data;
-  const { isDark, setIsDark } = useContext(DarkContext);
+  const { isDark } = useContext(DarkContext);
 
   return (
     <>

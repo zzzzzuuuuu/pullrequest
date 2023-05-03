@@ -2,12 +2,13 @@ import { useContext } from "react";
 import { DarkContext } from "../App";
 
 const DarkMode = () => {
-  const [dark, setIsDarkMode] = useContext(DarkContext);
+  const { isDark, setIsDarkMode } = useContext(DarkContext);
+  console.log(isDark);
   return (
     <>
       <button
         onClick={() => {
-          setIsDarkMode(!dark);
+          setIsDarkMode(!isDark);
         }}
       >
         Dark Mode

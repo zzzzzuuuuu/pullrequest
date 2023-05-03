@@ -26,14 +26,14 @@ import DarkMode from "./pages/DarkMode";
 export const DarkContext = createContext({
   // 초기값
   dark: false,
-  // setIsDarkMode: () => {},
+  setIsDarkMode: () => {},
 });
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const { dark } = useContext(DarkContext);
-  const setIsDarkMode = (dark) => setIsDark(!dark);
+  const setIsDarkMode = () => setIsDark(!isDark);
 
   useEffect(() => {
     localStorage.setItem("UserInfo", JSON.stringify(UserInfo));
@@ -41,11 +41,11 @@ function App() {
 
   return isLogin ? (
     <>
-      <DarkContext.Provider value={(isDark, setIsDark)}>
-        <DarkMode darkMode={setIsDarkMode} dark={dark} />
-        <div className={dark ? "bookcoverDarkMode" : "bookcover"}>
+      <DarkContext.Provider value={{ isDark, setIsDarkMode }}>
+        <DarkMode />
+        <div className={isDark ? "bookcoverDarkMode" : "bookcover"}>
           <div className="bookdot">
-            <div className={dark ? "pageDarkMode" : "page"}>
+            <div className={isDark ? "pageDarkMode" : "page"}>
               <div className="container">
                 <IntroList data={Data} dark={dark} />
                 <Routes>

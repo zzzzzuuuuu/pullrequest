@@ -36,3 +36,18 @@
     color: rgb(0, 128, 255);
     font-size: 18px;
   }
+
+  .over_guestDarkMode{
+    flex: 0.9;
+    display: flex;
+  }.over_guestDarkMode > img{
+      flex: 0.3;
+      width: 40%;
+      height: 70%;
+  }.over_guestDarkMode > p{
+      flex: 0.7;
+    font-family: 'KyoboHand';
+    font-size: 17px;
+    color: white;
+    margin: 10px 20px;
+  }

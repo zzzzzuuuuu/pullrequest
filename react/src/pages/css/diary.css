@@ -24,6 +24,21 @@
       font-size: 14px;
       font-family: 'KyoboHand';
   }
+
+  .page1DarkMode{
+    border: 1px solid rgb(182, 182, 182);
+    padding: 5px;
+    color:dodgerblue;
+    font-family: 'KyoboHand';
+    font-size: 15px;
+    margin-bottom: 15px;
+    white-space: pre-wrap; /* jsx 줄바꿈 */
+  }.page1DarkMode > p{
+      color: white;
+      text-align: center;
+      font-size: 14px;
+      font-family: 'KyoboHand';
+  }
   .row3title_diary{
     flex: 0.1;
     margin-bottom: 20px; /* 달력이랑 일기 사이 간격 */

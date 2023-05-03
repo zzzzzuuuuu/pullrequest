@@ -28,3 +28,16 @@
     font-size: 15px;
     color: black;
   }
+
+  .overDarkMode{
+    flex: 0.9;
+  }.over > img{
+    width: 100%;
+  }.overDarkMode > p{
+    font-family: 'KyoboHand';
+    font-size: 15px;
+    color: white;
+  }
+  .fontWhite{ 
+    color: white;
+  }
