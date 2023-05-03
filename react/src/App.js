@@ -18,38 +18,53 @@ import AlbumList from "./pages/AlbumList";
 import GuestBookList from "./pages/GuestBookList";
 
 import { Route, Routes } from "react-router-dom"; // 라우터 연결
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext, useContext } from "react";
 import { UserInfo } from "./pages/UserInfo";
 import Login from "./pages/Login";
+import DarkMode from "./pages/DarkMode";
+
+export const DarkContext = createContext({
+  // 수정해야함
+  dark: false,
+  setIsDarkMode: () => {},
+});
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+  const { dark, setIsDarkMode } = useContext(DarkContext);
+  // console.log(dark);
 
   useEffect(() => {
     localStorage.setItem("UserInfo", JSON.stringify(UserInfo));
   });
 
   return isLogin ? (
-    <div className="bookcover">
-      <div className="bookdot">
-        <div className="page">
-          <div className="container">
-            <IntroList data={Data} />
-            <Routes>
-              <Route path="/" element={<Home data={Data} />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/diary" element={<DiaryList data={Data} />} />
-              <Route path="/album" element={<AlbumList data={Data} />} />
-              <Route
-                path="/guestbook"
-                element={<GuestBookList data={Data} />}
-              />
-            </Routes>
-            <BoardList data={Data} />
+    <>
+      <DarkMode darkMode={setIsDark} dark={isDark} />
+      <DarkContext.Provider value={(dark, setIsDarkMode)}>
+        <div className={isDark ? "bookcoverDarkMode" : "bookcover"}>
+          <div className="bookdot">
+            <div className={isDark ? "pageDarkMode" : "page"}>
+              <div className="container">
+                <IntroList data={Data} />
+                <Routes>
+                  <Route path="/" element={<Home data={Data} />} />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/diary" element={<DiaryList data={Data} />} />
+                  <Route path="/album" element={<AlbumList data={Data} />} />
+                  <Route
+                    path="/guestbook"
+                    element={<GuestBookList data={Data} />}
+                  />
+                </Routes>
+                <BoardList data={Data} />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </DarkContext.Provider>
+    </>
   ) : (
     <div className="background">
       <Login data={setIsLogin} />
