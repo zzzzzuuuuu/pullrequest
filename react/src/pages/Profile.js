@@ -1,6 +1,9 @@
 import img from "../img/profilepic.jpg";
+import { useContext } from "react";
+import { DarkContext } from "../App";
 
 const Profile = () => {
+  const { isDark } = useContext(DarkContext);
   return (
     <>
       <div className="column2">
@@ -8,8 +11,8 @@ const Profile = () => {
           <div className="c1">★☆ㅈl유's homepage☆★</div>
           <div className="c2">http://www.mjworld.com/jyurang</div>
         </div>
-        <div className="row3 box">
-          <div className="over">
+        <div className={isDark ? "row3 boxDarkMode" : "row3 box"}>
+          <div className={isDark ? "overDarkMode" : "over"}>
             <img src={img} width="70%" alt="나"></img>
             <p>
               안녕하세요! 저는 명지대학교 정보통신공학과 20학번 안지유라고

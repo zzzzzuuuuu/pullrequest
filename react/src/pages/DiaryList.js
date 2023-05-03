@@ -1,8 +1,12 @@
 import Diary from "./Diary";
 import "./css/diary.css";
+import { useContext } from "react";
+import { DarkContext } from "../App";
 
 const DiaryList = (props) => {
   const { diary } = props.data;
+  const { isDark } = useContext(DarkContext);
+
   return (
     <>
       <div className="column2">
@@ -10,7 +14,7 @@ const DiaryList = (props) => {
           <div className="c1">★☆ㅈl유's homepage☆★</div>
           <div className="c2">http://www.mjworld.com/jyurang</div>
         </div>
-        <div className="row3 box">
+        <div className={isDark ? "row3 boxDarkMode" : "row3 box"}>
           <div className="row3title_diary">
             <div className="date">
               {" "}

@@ -3,9 +3,13 @@ import News1r from "./News1r";
 import News2one from "./News2one";
 import News2two from "./News2two";
 import img from "../img/miniroom.jpg";
+import { useContext } from "react";
+import { DarkContext } from "../App";
 
 const Home = (props) => {
   const { news1b, news1r, news2one, news2two } = props.data;
+  const { isDark } = useContext(DarkContext);
+
   return (
     <>
       <div className="column2">
@@ -13,7 +17,7 @@ const Home = (props) => {
           <div className="c1">★☆ㅈl유's homepage☆★</div>
           <div className="c2">http://www.mjworld.com/jyurang</div>
         </div>
-        <div className="row3 box">
+        <div className={isDark ? "row3 boxDarkMode" : "row3 box"}>
           <div className="row3news">
             Updated News <hr className="line"></hr>
           </div>

@@ -1,7 +1,10 @@
+import { useContext } from "react";
+import { DarkContext } from "../App";
 const Intro = (props) => {
+  const { isDark } = useContext(DarkContext);
   return (
     <>
-      <div>{props.data}</div>
+      <div className={isDark ? "fontWhite" : ""}>{props.data}</div>
     </>
   );
 };
