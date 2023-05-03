@@ -98,8 +98,9 @@
 
   .pageDarkMode{
     position: absolute;
-    background-color: black;
+    background-color: gray;
     border-radius: 9px;
+    border: 1px solid white;
 
     left: 10px;
     top: 10px;
@@ -138,7 +139,33 @@
   text-align: center;
 }
 
+.column1DarkMode{
+  flex: 0.4;
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0px 15px 10px 0px;
+}
+.row0{ /* TODAY, TOTAL */
+  flex: 0.1;
+  font-size: 12px;
+  text-align: center;
+}
+
 .row1{ /* 하얀 */
+  width: 190px; /*크기고정*/
+  height: 500px;
+  flex: 2;
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+}
+
+.row1DarkMode{ /* 하얀 */
+  background: black;
   width: 190px; /*크기고정*/
   height: 500px;
   flex: 2;
@@ -227,6 +254,10 @@
   color: crimson;
 }
 
+.cntDarkMode{ 
+  color: white;
+}
+
 .line{
   margin-block-start: 0.2em;
   margin-block-end: 0.2em;
@@ -279,7 +310,5 @@
   font-size: 15px;
   padding: 5px;
   border-radius: 0px 5px 5px 0px;
-}.menubox:hover { /*버튼 클릭시 */
-  background-color:#9fc5e8;
 }
 

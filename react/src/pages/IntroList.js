@@ -6,20 +6,23 @@ import { DarkContext } from "../App";
 const IntroList = (props) => {
   const { intro } = props.data;
   const [like, setLike] = useState(0);
+  const [isDark, setIsDark] = useState(false);
+  const { dark } = useContext(DarkContext);
+  console.log(dark);
 
   return (
     <>
-      <div className="column1">
+      <div className={dark ? "column1DarkMode" : "column1"}>
         <div className="row0">
           TODAY <span className="cnt">15</span> | TOTAL 230325
         </div>
-        <div className="row1 box">
+        <div className={dark ? "row1DarkMode boxDarkMode" : "row1 box"}>
           <div className="row1a">
             <img src={img} width="190px"></img>
           </div>
           <div className="row1b">
             {intro.map((data, index) => (
-              <Intro data={data} key={index} />
+              <Intro data={data} key={index} isDark={props.dark} />
             ))}
           </div>
           <div className="row1d">

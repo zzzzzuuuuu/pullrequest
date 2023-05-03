@@ -1,14 +1,18 @@
-const DarkMode = (props) => {
+import { useContext } from "react";
+import { DarkContext } from "../App";
+
+const DarkMode = () => {
+  const [dark, setIsDarkMode] = useContext(DarkContext);
   return (
     <>
       <button
-        className="darkModeToggle"
-        onClick={() => props.darkMode(!props.dark)}
+        onClick={() => {
+          setIsDarkMode(!dark);
+        }}
       >
         Dark Mode
-      </button>
+      </button>{" "}
     </>
   );
 };
-
 export default DarkMode;
