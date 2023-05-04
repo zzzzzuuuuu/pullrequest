@@ -3,7 +3,6 @@ import { DarkContext } from "../App";
 
 const DarkMode = () => {
   const { isDark, setIsDarkMode } = useContext(DarkContext);
-  console.log(isDark);
   return (
     <>
       <button
@@ -12,7 +11,7 @@ const DarkMode = () => {
         }}
       >
         Dark Mode
-      </button>{" "}
+      </button>
     </>
   );
 };

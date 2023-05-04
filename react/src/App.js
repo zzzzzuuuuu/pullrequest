@@ -17,14 +17,13 @@ import DiaryList from "./pages/DiaryList";
 import AlbumList from "./pages/AlbumList";
 import GuestBookList from "./pages/GuestBookList";
 
-import { Route, Routes } from "react-router-dom"; // 라우터 연결
+import { Route, Routes } from "react-router-dom";
 import { useState, useEffect, createContext, useContext } from "react";
 import { UserInfo } from "./pages/UserInfo";
 import Login from "./pages/Login";
 import DarkMode from "./pages/DarkMode";
 
 export const DarkContext = createContext({
-  // 초기값
   dark: false,
   setIsDarkMode: () => {},
 });
@@ -32,7 +31,6 @@ export const DarkContext = createContext({
 function App() {
   const [isLogin, setIsLogin] = useState(false);
   const [isDark, setIsDark] = useState(false);
-  const { dark } = useContext(DarkContext);
   const setIsDarkMode = () => setIsDark(!isDark);
 
   useEffect(() => {
@@ -47,24 +45,18 @@ function App() {
           <div className="bookdot">
             <div className={isDark ? "pageDarkMode" : "page"}>
               <div className="container">
-                <IntroList data={Data} dark={dark} />
+                <IntroList data={Data} />
                 <Routes>
-                  <Route path="/" element={<Home data={Data} dark={dark} />} />
+                  <Route path="/" element={<Home data={Data} />} />
                   <Route path="/profile" element={<Profile />} />
-                  <Route
-                    path="/diary"
-                    element={<DiaryList data={Data} dark={dark} />}
-                  />
-                  <Route
-                    path="/album"
-                    element={<AlbumList data={Data} dark={dark} />}
-                  />
+                  <Route path="/diary" element={<DiaryList data={Data} />} />
+                  <Route path="/album" element={<AlbumList data={Data} />} />
                   <Route
                     path="/guestbook"
-                    element={<GuestBookList data={Data} dark={dark} />}
+                    element={<GuestBookList data={Data} />}
                   />
                 </Routes>
-                <BoardList data={Data} dark={dark} />
+                <BoardList data={Data} />
               </div>
             </div>
           </div>
